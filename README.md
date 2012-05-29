@@ -19,3 +19,4 @@ $ gits -n checkout -b local_dev
 On: (project_tesla):
   Switched to a new branch 'local_dev'
 
+Using the eGit plug in for Eclipse might be a bit easier than the using the bash.

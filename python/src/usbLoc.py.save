@@ -1,0 +1,16 @@
+#Print info regarding the included locations
+impot serial
+
+locations=['/dev/usbdev1.8']
+
+for device in locations:
+	try:
+		ser = serial.Serial(device, 9600)
+		break
+	except:
+		print "Failed to connect on", device
+
+try:
+	print  ser.readlinie()
+except:
+	print "Failed to send!"

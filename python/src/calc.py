@@ -1,24 +1,26 @@
-#! /usr/bin/env python
+#!/usr/bin/python3
 
 # Example 2: A Python program from the Raspberry Pi User Guide
+from decimal import Decimal
+
 
 goAgain = 1
 while goAgain == 1:
-    firstNumber = float(raw_input("Type the first number: " ))
-    secondNumber = float(raw_input("Type the second number: "))
+    firstNumber = float(input("Type the first number: " ))
+    secondNumber = float(input("Type the second number: "))
 
-    print "{0} + {1} = {2}" .format(firstNumber, secondNumber, firstNumber + secondNumber)
+    print ("%1d + %1d = %1d" % (firstNumber, secondNumber, firstNumber + secondNumber))
     
-    print "{0} - {1} = {2}" .format(firstNumber, secondNumber, firstNumber - secondNumber)
+    print ("%1d - %1d = %1d" % (firstNumber, secondNumber, firstNumber - secondNumber))
 
-    print "{0} * {1} = {2}" .format(firstNumber, secondNumber, firstNumber * secondNumber)
+    print ("%1d * %1d = %1d" % (firstNumber, secondNumber, firstNumber * secondNumber))
+
+    print ("%1d ^ %1d = %.2E" % (firstNumber, secondNumber, Decimal(firstNumber ** secondNumber)))
 
     if(secondNumber != 0):
-        print "{0} / {1} = {2}" .format(firstNumber, secondNumber, firstNumber / secondNumber)
-        print "{0} % {1} = {2}" .format(firstNumber, secondNumber, firstNumber % secondNumber)
+     mod = firstNumber % secondNumber
+     print ("%1d / %1d = %1f" % (firstNumber, secondNumber, firstNumber / secondNumber))
+     print ("%1d %% %1d = %1d" % (firstNumber, secondNumber, mod))
 
-    goAgain = int(raw_input("Type 1 to enter more numbers, or any other number to quit: "))
-    
-                  
-        
+    goAgain = int(input("Type 1 to enter more numbers, or any other number to quit: "))
                                                                                             
